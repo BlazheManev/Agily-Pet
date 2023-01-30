@@ -26,9 +26,6 @@ React.js,JWT,Node.js,Typescript,google api,calendari api,dog api,Mongo,express,b
 - VisualStudio Code
 
 
-## Vzpostavitev projekta
-Ker se projekt nahaja na GitLab-u, lahko vzpostavimo projekt tako da kloniramo [GitLab repozitorij](https://gitlab.com/LukacJan/agilypet).
-
 
 ## Namestitev projekta
 Projekt se lahko namesti s pomočjo ```docker-compose.yml``` datoteke, ki se nahaja v root direktoriju projekta. 
