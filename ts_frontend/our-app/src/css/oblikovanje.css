@@ -1,0 +1,193 @@
+.bg-orange {
+  background-color: #b87a00 !important;
+}
+
+.bg-orange_vsebina {
+  background-color: #f5e6c2;
+}
+
+.pisava-white {
+  color: #fff;
+}
+
+.mouse_over:hover {
+  cursor: pointer;
+  background-color: #a66f02;
+}
+
+.border_color {
+  min-height: 100%;
+  border: 2px solid #a66f02;
+  border-radius: 1em;
+  background-color: rgb(224, 224, 224);
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.slika {
+  border-radius: 1em;
+}
+
+.margin_reg {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.margin_top {
+  margin-top: 2em;
+}
+
+.footer {
+  margin-top: -50px;
+}
+
+.padding_top {
+  padding-top: 2em;
+}
+
+.padding_bottom {
+  padding-bottom: 2em;
+}
+
+.koledar{
+  border:solid 1px rgb(0, 0, 0);
+  width:40em; 
+  height:30em;
+  border-radius: 1em;
+}
+
+.koledar2{
+  border:solid 1px rgb(0, 0, 0);
+  width:800px; 
+  height:600px;
+  border-radius: 1em;
+}
+
+.podatki{
+  border-color: #a66f02;
+  border-style: solid;
+  border-width: 0.2em;
+  border-radius: 1em;
+  margin-top: 0.5em;
+}
+
+.slika_psa{
+  max-width:100%;
+  max-height:100%;
+  border-radius: 4em;
+  border-color: #a66f02;
+  border-style: solid;
+  border-width: 0.2em;
+}
+
+.izbran_element {
+  margin-top: 1em;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.izbrana_slika{
+  border-radius: 100%;
+  border-color: #a66f02;
+  border-style: solid;
+  border-width: 0.2em;
+}
+
+.domov{
+  text-decoration: none;
+  color: #fff;
+}
+
+.margin_left{
+  margin-left: 1.5em;
+}
+
+.border_orange{
+  border-color: #b87a00;
+  border-style: solid;
+  border-width: 0.05em;
+  border-radius: 0.2em;
+}
+
+.img_min{
+  min-height: 17.5em;
+}
+
+.small_foot_min{
+  min-height: 2.5em;
+}
+
+#white_text{
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #b87a00 !important;
+  border-color: #b87a00 !important;
+}
+
+.port_td{
+  max-Width:"50px";
+  max-Height:"50px";
+  min-Width:"40px";
+  min-Height:"40px";
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(97,96,96);
+}
+
+.slika_ovir{
+  max-width:50px; 
+  max-height:50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .port_td {
+    width: 30px;
+    height: 30px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(97,96,96);
+  }
+
+  .slika_ovir{
+    width: 30px;
+    height: 30px;
+  }
+
+  .koledar{
+    border:solid 1px rgb(0, 0, 0);
+    width:21em; 
+    height:20em;
+    border-radius: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 600px) {
+
+  .koledar{
+    border:solid 1px rgb(0, 0, 0);
+    width:25em; 
+    height:25em;
+    border-radius: 0.5em;
+  }
+}
+
+.rows{
+  max-Width:"50px";
+  max-Height:"50px";
+  min-Width:"40px";
+  min-Height:"40px";
+  border:'1px solid rgb(97,96,96)'
+}
+
+.dogs{
+  border-style: solid;
+  border-width: 0.2em;
+  border-color: #efd6a3;
+  border-radius: 10px;
+  margin: 15px;
+}
