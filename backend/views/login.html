@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Login</title>
+</head>
+
+<body>
+	<h1>Login</h1>
+	<form id="login">
+		<input type="text" autocomplete="off" id="email" placeholder="email" />
+		<input type="password" autocomplete="off" id="password" placeholder="Password" />
+		<div class="g-recaptcha" data-sitekey="6LdpvDEUAAAAAMy8x0y8PS99j4BavfO2oBdVTQGZ"></div>
+		<input type="submit" value="Submit Form" />
+	</form>
+	<iframe src="https://calendar.google.com/calendar/embed?src=blazhemanevris%40gmail.com&ctz=Europe%2FBelgrade"
+		style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<script>
+
+		const form = document.getElementById('login')
+		form.addEventListener('submit', login)
+
+		async function login(event) {
+			event.preventDefault()
+			const email = document.getElementById('email').value
+			const password = document.getElementById('password').value
+			const captcha = document.querySelector('#g-recaptcha-response').value;
+
+			if (captcha === "") {
+				console.log("null ee")
+				alert("select the box  I'm not a robot")
+
+			} else if (captcha !== null) {
+
+				const result = await fetch('/api/login', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						email,
+						password
+					})
+				}).then((res) => res.json())
+
+				if (result.status === 'ok') {
+					// everythign went fine
+					console.log('Got the token: ', result.data)
+					localStorage.setItem('token', result.data)
+					alert('Success')
+				} else {
+					alert(result.error)
+				}
+			}
+		} 
+	</script>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+
+</body>
+
+</html>

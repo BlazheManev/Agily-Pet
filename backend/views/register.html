@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <h1>Registration</h1>
+    <form id="reg-form">
+        <input type="text" autocomplete="off" id="email" placeholder="Email" />
+
+        <input type="text" autocomplete="off" id="username" placeholder="Username" />
+        <input type="password" autocomplete="off" id="password" placeholder="Password" />
+        <input type="submit" value="Submit Form" />
+    </form>
+
+    <script>
+        const form = document.getElementById('reg-form')
+        form.addEventListener('submit', registerUser)
+        console.log("asd")
+        async function registerUser(event) {
+            event.preventDefault()
+            const email = document.getElementById('email').value
+            const username = document.getElementById('username').value
+            const password = document.getElementById('password').value
+
+            const result = await fetch('/api/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email,
+                    username,
+                    password
+                })
+            }).then((res) => res.json())
+            if (result.status === 'ok') {
+                alert("Nov Uporabnik sa e-naslovu " + email)
+            } else {
+                alert(result.error)
+            }
+        }
+        function inputCheck() {
+            console.log("checking...");
+            if ($('username').val().length > 0) {
+                $('form#AddNewService').submit();
+            } else {
+                alert("problem!");
+            }
+        }
+    </script>
+</body>
+
+</html>
